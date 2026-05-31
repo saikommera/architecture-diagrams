@@ -1,0 +1,92 @@
+<svg viewBox="0 0 880 520" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="880" height="520" fill="#f8f9fa" rx="12"/>
+  <text x="440" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#1F3864">Amazon EKS Multi-AZ Cluster Architecture</text>
+  <text x="440" y="50" text-anchor="middle" font-size="10" fill="#666">Production · us-east-1 · 3 Availability Zones · 99.9% SLO</text>
+
+  <!-- AWS Cloud boundary -->
+  <rect x="20" y="65" width="840" height="435" fill="none" stroke="#FF9900" stroke-width="2" stroke-dasharray="6,3" rx="10"/>
+  <text x="40" y="82" font-size="10" fill="#FF9900" font-weight="bold">AWS Cloud — us-east-1</text>
+
+  <!-- VPC -->
+  <rect x="35" y="88" width="810" height="395" fill="none" stroke="#378ADD" stroke-width="1.5" stroke-dasharray="4,2" rx="8"/>
+  <text x="55" y="104" font-size="10" fill="#378ADD" font-weight="bold">VPC 10.0.0.0/16</text>
+
+  <!-- AZ Columns -->
+  <!-- AZ-1a -->
+  <rect x="50" y="112" width="245" height="350" fill="#E6F1FB" stroke="#378ADD" stroke-width="1" rx="6"/>
+  <text x="172" y="130" text-anchor="middle" font-size="10" font-weight="bold" fill="#185FA5">us-east-1a</text>
+  <rect x="62" y="135" width="221" height="40" fill="#B5D4F4" stroke="#185FA5" stroke-width="1" rx="4"/>
+  <text x="172" y="150" text-anchor="middle" font-size="9" font-weight="bold" fill="#042C53">Public Subnet 10.0.101.0/24</text>
+  <text x="172" y="165" text-anchor="middle" font-size="9" fill="#042C53">NAT Gateway · ALB Node</text>
+  <rect x="62" y="185" width="221" height="255" fill="white" stroke="#185FA5" stroke-width="1" rx="4"/>
+  <text x="172" y="200" text-anchor="middle" font-size="9" font-weight="bold" fill="#185FA5">Private Subnet 10.0.1.0/24</text>
+  <rect x="74" y="208" width="197" height="50" fill="#E6F1FB" stroke="#378ADD" stroke-width="1" rx="4"/>
+  <text x="172" y="226" text-anchor="middle" font-size="9" font-weight="bold" fill="#185FA5">General Node Group</text>
+  <text x="172" y="240" text-anchor="middle" font-size="9" fill="#555">m5.xlarge · min:2 max:15</text>
+  <rect x="74" y="266" width="197" height="50" fill="#EAF3DE" stroke="#639922" stroke-width="1" rx="4"/>
+  <text x="172" y="284" text-anchor="middle" font-size="9" font-weight="bold" fill="#3B6D11">App Pods</text>
+  <text x="172" y="298" text-anchor="middle" font-size="9" fill="#555">payment-api · user-api · notifications</text>
+  <rect x="74" y="324" width="90" height="40" fill="#FAEEDA" stroke="#BA7517" stroke-width="1" rx="4"/>
+  <text x="119" y="340" text-anchor="middle" font-size="8" fill="#854F0B">OTel Collector</text>
+  <text x="119" y="354" text-anchor="middle" font-size="8" fill="#555">DaemonSet</text>
+  <rect x="181" y="324" width="90" height="40" fill="#FAECE7" stroke="#993C1D" stroke-width="1" rx="4"/>
+  <text x="226" y="340" text-anchor="middle" font-size="8" fill="#993C1D">Node Exporter</text>
+  <text x="226" y="354" text-anchor="middle" font-size="8" fill="#555">Prometheus</text>
+  <rect x="74" y="372" width="197" height="40" fill="#EEEDFE" stroke="#7F77DD" stroke-width="1" rx="4"/>
+  <text x="172" y="388" text-anchor="middle" font-size="8" font-weight="bold" fill="#3C3489">Spot Node Group</text>
+  <text x="172" y="402" text-anchor="middle" font-size="8" fill="#555">m5.large · Batch workloads</text>
+
+  <!-- AZ-1b -->
+  <rect x="317" y="112" width="245" height="350" fill="#E6F1FB" stroke="#378ADD" stroke-width="1" rx="6"/>
+  <text x="439" y="130" text-anchor="middle" font-size="10" font-weight="bold" fill="#185FA5">us-east-1b</text>
+  <rect x="329" y="135" width="221" height="40" fill="#B5D4F4" stroke="#185FA5" stroke-width="1" rx="4"/>
+  <text x="439" y="150" text-anchor="middle" font-size="9" font-weight="bold" fill="#042C53">Public Subnet 10.0.102.0/24</text>
+  <text x="439" y="165" text-anchor="middle" font-size="9" fill="#042C53">NAT Gateway · ALB Node</text>
+  <rect x="329" y="185" width="221" height="255" fill="white" stroke="#185FA5" stroke-width="1" rx="4"/>
+  <text x="439" y="200" text-anchor="middle" font-size="9" font-weight="bold" fill="#185FA5">Private Subnet 10.0.2.0/24</text>
+  <rect x="341" y="208" width="197" height="50" fill="#E6F1FB" stroke="#378ADD" stroke-width="1" rx="4"/>
+  <text x="439" y="226" text-anchor="middle" font-size="9" font-weight="bold" fill="#185FA5">General Node Group</text>
+  <text x="439" y="240" text-anchor="middle" font-size="9" fill="#555">m5.xlarge · min:2 max:15</text>
+  <rect x="341" y="266" width="197" height="50" fill="#EAF3DE" stroke="#639922" stroke-width="1" rx="4"/>
+  <text x="439" y="284" text-anchor="middle" font-size="9" font-weight="bold" fill="#3B6D11">App Pods</text>
+  <text x="439" y="298" text-anchor="middle" font-size="9" fill="#555">payment-api · user-api · notifications</text>
+  <rect x="341" y="324" width="90" height="40" fill="#FAEEDA" stroke="#BA7517" stroke-width="1" rx="4"/>
+  <text x="386" y="340" text-anchor="middle" font-size="8" fill="#854F0B">OTel Collector</text>
+  <text x="386" y="354" text-anchor="middle" font-size="8" fill="#555">DaemonSet</text>
+  <rect x="448" y="324" width="90" height="40" fill="#E1F5EE" stroke="#1D9E75" stroke-width="1" rx="4"/>
+  <text x="493" y="340" text-anchor="middle" font-size="8" fill="#0F6E56">ArgoCD</text>
+  <text x="493" y="354" text-anchor="middle" font-size="8" fill="#555">GitOps agent</text>
+  <rect x="341" y="372" width="197" height="40" fill="#EEEDFE" stroke="#7F77DD" stroke-width="1" rx="4"/>
+  <text x="439" y="388" text-anchor="middle" font-size="8" font-weight="bold" fill="#3C3489">Monitoring Stack</text>
+  <text x="439" y="402" text-anchor="middle" font-size="8" fill="#555">Prometheus · Grafana</text>
+
+  <!-- AZ-1c -->
+  <rect x="584" y="112" width="245" height="350" fill="#E6F1FB" stroke="#378ADD" stroke-width="1" rx="6"/>
+  <text x="706" y="130" text-anchor="middle" font-size="10" font-weight="bold" fill="#185FA5">us-east-1c</text>
+  <rect x="596" y="135" width="221" height="40" fill="#B5D4F4" stroke="#185FA5" stroke-width="1" rx="4"/>
+  <text x="706" y="150" text-anchor="middle" font-size="9" font-weight="bold" fill="#042C53">Public Subnet 10.0.103.0/24</text>
+  <text x="706" y="165" text-anchor="middle" font-size="9" fill="#042C53">NAT Gateway · ALB Node</text>
+  <rect x="596" y="185" width="221" height="255" fill="white" stroke="#185FA5" stroke-width="1" rx="4"/>
+  <text x="706" y="200" text-anchor="middle" font-size="9" font-weight="bold" fill="#185FA5">Private Subnet 10.0.3.0/24</text>
+  <rect x="608" y="208" width="197" height="50" fill="#E6F1FB" stroke="#378ADD" stroke-width="1" rx="4"/>
+  <text x="706" y="226" text-anchor="middle" font-size="9" font-weight="bold" fill="#185FA5">General Node Group</text>
+  <text x="706" y="240" text-anchor="middle" font-size="9" fill="#555">m5.xlarge · min:2 max:15</text>
+  <rect x="608" y="266" width="197" height="50" fill="#EAF3DE" stroke="#639922" stroke-width="1" rx="4"/>
+  <text x="706" y="284" text-anchor="middle" font-size="9" font-weight="bold" fill="#3B6D11">App Pods</text>
+  <text x="706" y="298" text-anchor="middle" font-size="9" fill="#555">payment-api · user-api · notifications</text>
+  <rect x="608" y="324" width="90" height="40" fill="#FAEEDA" stroke="#BA7517" stroke-width="1" rx="4"/>
+  <text x="653" y="340" text-anchor="middle" font-size="8" fill="#854F0B">OTel Collector</text>
+  <text x="653" y="354" text-anchor="middle" font-size="8" fill="#555">DaemonSet</text>
+  <rect x="715" y="324" width="90" height="40" fill="#FAECE7" stroke="#993C1D" stroke-width="1" rx="4"/>
+  <text x="760" y="340" text-anchor="middle" font-size="8" fill="#993C1D">Vault Agent</text>
+  <text x="760" y="354" text-anchor="middle" font-size="8" fill="#555">Secrets inject</text>
+  <rect x="608" y="372" width="197" height="40" fill="#EEEDFE" stroke="#7F77DD" stroke-width="1" rx="4"/>
+  <text x="706" y="388" text-anchor="middle" font-size="8" font-weight="bold" fill="#3C3489">RDS Multi-AZ</text>
+  <text x="706" y="402" text-anchor="middle" font-size="8" fill="#555">PostgreSQL · Private subnet</text>
+
+  <!-- EKS Control Plane -->
+  <rect x="250" y="470" width="380" height="22" fill="#1F3864" rx="6"/>
+  <text x="440" y="485" text-anchor="middle" font-size="10" fill="white" font-weight="bold">EKS Managed Control Plane (AWS-managed, multi-AZ) · Kubernetes 1.29</text>
+
+  <text x="440" y="510" text-anchor="middle" font-size="9" fill="#888">Sai Babji Kommera · Senior DevOps/SRE · github.com/saikommera</text>
+</svg>
