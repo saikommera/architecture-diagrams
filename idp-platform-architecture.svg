@@ -1,0 +1,100 @@
+<svg viewBox="0 0 900 620" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="#f8f9fa" rx="12"/>
+  <text x="450" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#1F3864">Internal Developer Platform (IDP) Architecture</text>
+  <text x="450" y="56" text-anchor="middle" font-size="11" fill="#666">AWS · Terraform · GitLab CI/CD · ArgoCD · Amazon EKS</text>
+
+  <!-- Developer Layer -->
+  <rect x="30" y="80" width="840" height="100" fill="#E6F1FB" stroke="#378ADD" stroke-width="1.5" rx="8"/>
+  <text x="450" y="100" text-anchor="middle" font-size="12" font-weight="bold" fill="#185FA5">Developer Experience Layer</text>
+  <rect x="60" y="108" width="130" height="52" fill="white" stroke="#378ADD" stroke-width="1" rx="6"/>
+  <text x="125" y="128" text-anchor="middle" font-size="11" font-weight="bold" fill="#185FA5">Self-Service Portal</text>
+  <text x="125" y="145" text-anchor="middle" font-size="10" fill="#555">Backstage / IDP UI</text>
+  <rect x="220" y="108" width="130" height="52" fill="white" stroke="#378ADD" stroke-width="1" rx="6"/>
+  <text x="285" y="128" text-anchor="middle" font-size="11" font-weight="bold" fill="#185FA5">Golden Paths</text>
+  <text x="285" y="145" text-anchor="middle" font-size="10" fill="#555">Templates &amp; Scaffolding</text>
+  <rect x="380" y="108" width="130" height="52" fill="white" stroke="#378ADD" stroke-width="1" rx="6"/>
+  <text x="445" y="128" text-anchor="middle" font-size="11" font-weight="bold" fill="#185FA5">Service Catalog</text>
+  <text x="445" y="145" text-anchor="middle" font-size="10" fill="#555">Approved Components</text>
+  <rect x="540" y="108" width="130" height="52" fill="white" stroke="#378ADD" stroke-width="1" rx="6"/>
+  <text x="605" y="128" text-anchor="middle" font-size="11" font-weight="bold" fill="#185FA5">Docs &amp; Runbooks</text>
+  <text x="605" y="145" text-anchor="middle" font-size="10" fill="#555">Confluence / Wiki</text>
+  <rect x="700" y="108" width="140" height="52" fill="white" stroke="#378ADD" stroke-width="1" rx="6"/>
+  <text x="770" y="128" text-anchor="middle" font-size="11" font-weight="bold" fill="#185FA5">Developer Metrics</text>
+  <text x="770" y="145" text-anchor="middle" font-size="10" fill="#555">DORA / SPACE</text>
+
+  <!-- CI/CD Layer -->
+  <rect x="30" y="200" width="840" height="100" fill="#EAF3DE" stroke="#639922" stroke-width="1.5" rx="8"/>
+  <text x="450" y="220" text-anchor="middle" font-size="12" font-weight="bold" fill="#3B6D11">CI/CD &amp; GitOps Layer</text>
+  <rect x="60" y="228" width="150" height="52" fill="white" stroke="#639922" stroke-width="1" rx="6"/>
+  <text x="135" y="248" text-anchor="middle" font-size="11" font-weight="bold" fill="#3B6D11">GitLab / GitHub</text>
+  <text x="135" y="265" text-anchor="middle" font-size="10" fill="#555">Source Control</text>
+  <rect x="240" y="228" width="150" height="52" fill="white" stroke="#639922" stroke-width="1" rx="6"/>
+  <text x="315" y="248" text-anchor="middle" font-size="11" font-weight="bold" fill="#3B6D11">GitHub Actions</text>
+  <text x="315" y="265" text-anchor="middle" font-size="10" fill="#555">CI Pipeline + Security Gates</text>
+  <rect x="420" y="228" width="150" height="52" fill="white" stroke="#639922" stroke-width="1" rx="6"/>
+  <text x="495" y="248" text-anchor="middle" font-size="11" font-weight="bold" fill="#3B6D11">Amazon ECR</text>
+  <text x="495" y="265" text-anchor="middle" font-size="10" fill="#555">Container Registry</text>
+  <rect x="600" y="228" width="150" height="52" fill="white" stroke="#639922" stroke-width="1" rx="6"/>
+  <text x="675" y="248" text-anchor="middle" font-size="11" font-weight="bold" fill="#3B6D11">ArgoCD</text>
+  <text x="675" y="265" text-anchor="middle" font-size="10" fill="#555">GitOps CD Engine</text>
+
+  <!-- IaC Layer -->
+  <rect x="30" y="320" width="400" height="100" fill="#FAEEDA" stroke="#BA7517" stroke-width="1.5" rx="8"/>
+  <text x="230" y="340" text-anchor="middle" font-size="12" font-weight="bold" fill="#854F0B">Infrastructure as Code</text>
+  <rect x="55" y="350" width="110" height="52" fill="white" stroke="#BA7517" stroke-width="1" rx="6"/>
+  <text x="110" y="370" text-anchor="middle" font-size="11" font-weight="bold" fill="#854F0B">Terraform</text>
+  <text x="110" y="387" text-anchor="middle" font-size="10" fill="#555">Multi-acct Modules</text>
+  <rect x="185" y="350" width="110" height="52" fill="white" stroke="#BA7517" stroke-width="1" rx="6"/>
+  <text x="240" y="370" text-anchor="middle" font-size="11" font-weight="bold" fill="#854F0B">Ansible</text>
+  <text x="240" y="387" text-anchor="middle" font-size="10" fill="#555">Config Management</text>
+  <rect x="315" y="350" width="100" height="52" fill="white" stroke="#BA7517" stroke-width="1" rx="6"/>
+  <text x="365" y="370" text-anchor="middle" font-size="11" font-weight="bold" fill="#854F0B">OPA</text>
+  <text x="365" y="387" text-anchor="middle" font-size="10" fill="#555">Policy-as-Code</text>
+
+  <!-- Security Layer -->
+  <rect x="450" y="320" width="420" height="100" fill="#FAECE7" stroke="#993C1D" stroke-width="1.5" rx="8"/>
+  <text x="660" y="340" text-anchor="middle" font-size="12" font-weight="bold" fill="#993C1D">DevSecOps</text>
+  <rect x="470" y="350" width="100" height="52" fill="white" stroke="#993C1D" stroke-width="1" rx="6"/>
+  <text x="520" y="370" text-anchor="middle" font-size="11" font-weight="bold" fill="#993C1D">SonarQube</text>
+  <text x="520" y="387" text-anchor="middle" font-size="10" fill="#555">SAST</text>
+  <rect x="590" y="350" width="100" height="52" fill="white" stroke="#993C1D" stroke-width="1" rx="6"/>
+  <text x="640" y="370" text-anchor="middle" font-size="11" font-weight="bold" fill="#993C1D">Trivy / Snyk</text>
+  <text x="640" y="387" text-anchor="middle" font-size="10" fill="#555">Container + SCA</text>
+  <rect x="710" y="350" width="140" height="52" fill="white" stroke="#993C1D" stroke-width="1" rx="6"/>
+  <text x="780" y="370" text-anchor="middle" font-size="11" font-weight="bold" fill="#993C1D">Vault / GuardDuty</text>
+  <text x="780" y="387" text-anchor="middle" font-size="10" fill="#555">Secrets + Threat Detect</text>
+
+  <!-- Runtime Layer -->
+  <rect x="30" y="440" width="840" height="100" fill="#E1F5EE" stroke="#1D9E75" stroke-width="1.5" rx="8"/>
+  <text x="450" y="460" text-anchor="middle" font-size="12" font-weight="bold" fill="#0F6E56">Runtime Platform — Amazon EKS (Multi-AZ)</text>
+  <rect x="55" y="468" width="130" height="52" fill="white" stroke="#1D9E75" stroke-width="1" rx="6"/>
+  <text x="120" y="488" text-anchor="middle" font-size="11" font-weight="bold" fill="#0F6E56">Workloads</text>
+  <text x="120" y="505" text-anchor="middle" font-size="10" fill="#555">Pods · Deployments</text>
+  <rect x="210" y="468" width="130" height="52" fill="white" stroke="#1D9E75" stroke-width="1" rx="6"/>
+  <text x="275" y="488" text-anchor="middle" font-size="11" font-weight="bold" fill="#0F6E56">HPA / KEDA</text>
+  <text x="275" y="505" text-anchor="middle" font-size="10" fill="#555">Autoscaling</text>
+  <rect x="365" y="468" width="130" height="52" fill="white" stroke="#1D9E75" stroke-width="1" rx="6"/>
+  <text x="430" y="488" text-anchor="middle" font-size="11" font-weight="bold" fill="#0F6E56">Ingress / ALB</text>
+  <text x="430" y="505" text-anchor="middle" font-size="10" fill="#555">Traffic Routing</text>
+  <rect x="520" y="468" width="130" height="52" fill="white" stroke="#1D9E75" stroke-width="1" rx="6"/>
+  <text x="585" y="488" text-anchor="middle" font-size="11" font-weight="bold" fill="#0F6E56">Service Mesh</text>
+  <text x="585" y="505" text-anchor="middle" font-size="10" fill="#555">Istio / App Mesh</text>
+  <rect x="675" y="468" width="165" height="52" fill="white" stroke="#1D9E75" stroke-width="1" rx="6"/>
+  <text x="757" y="488" text-anchor="middle" font-size="11" font-weight="bold" fill="#0F6E56">Observability</text>
+  <text x="757" y="505" text-anchor="middle" font-size="10" fill="#555">OTel · Prometheus · Grafana</text>
+
+  <!-- Arrows -->
+  <line x1="450" y1="180" x2="450" y2="198" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="450" y1="300" x2="450" y2="318" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="450" y1="420" x2="450" y2="438" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Legend -->
+  <text x="450" y="598" text-anchor="middle" font-size="10" fill="#888">Sai Babji Kommera · Senior DevOps / SRE Engineer · github.com/saikommera</text>
+</svg>
